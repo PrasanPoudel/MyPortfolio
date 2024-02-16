@@ -65,7 +65,7 @@ header{
   display: flex;
   gap: 35px;
 }
-.navLinks a{
+.navLinks ul li a{
   font-size: 2rem;
   position: relative;
   cursor: pointer;
@@ -126,11 +126,11 @@ margin-bottom: 200px;
 }
 .myName{
   color: var(--primaryColor);
-  font-size: 4rem;
+  font-size: 5rem;
   background-size: cover;
 }
 .transparentText{
-  font-size: 4rem;
+  font-size: 5rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   color: var(--primaryColor);
@@ -193,7 +193,10 @@ margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  height: 135vh;
+  height: 100vh;
+  }
+  .heroImg img{
+    height: 300px;
   }
   .navLinks{
     padding: auto;
@@ -202,8 +205,9 @@ margin-bottom: 200px;
     background-color: var(--primaryColor);
     position: absolute;
     top: 150px;
-    width: 75%;
+    width: 80%;
     height: 75vh;
+    text-align: center;
     justify-content: center;
     align-items: center;
     display: none;
@@ -217,7 +221,7 @@ margin-bottom: 200px;
   }
   .navLinks ul li a{
     color: #fff;
-    font-size: 50px;
+    font-size: 3.3rem;
   }
   .menu_active{
     display: flex;
@@ -243,11 +247,11 @@ margin-bottom: 200px;
   flex-direction: column;
 }
 .why{
-  font-size: 4rem;
+  font-size: 5rem;
   z-index: 1;
 }
 .secondaryColor{
-  font-size: 4rem;
+  font-size: 5rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   color: var(--text-color);
@@ -255,7 +259,7 @@ margin-bottom: 200px;
 }
 .primaryColor{
   color: var(--primaryColor);
-  font-size: 4rem;
+  font-size: 5rem;
   z-index: 1;
 }
 .explanation{
@@ -273,6 +277,9 @@ margin-bottom: 200px;
 }
 
 @media screen and (max-width:1200px) {
+  :root{
+    font-size: 7.5px;
+  }
   .about{
     display: flex;
     flex-direction: column;
