@@ -1,106 +1,69 @@
-"use strict";
-let header = document.querySelector('header');
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const menu= document.querySelector("#menuBtn");
+const navLinks= document.querySelector(".navLinks");
+menu.onclick=()=>{
  
- 
-window.addEventListener('scroll', () => {
-    header.classList.toggle('shadow', window.scrollY > 0);
-});
- 
-menu.onclick = () => {
-    navbar.classList.toggle('active');
-
- if(menu.classList.contains('bx-menu-alt-right')){
-    menu.classList.replace('bx-menu-alt-right','bx-no-entry');
-    }else{
-        menu.classList.replace('bx-no-entry','bx-menu-alt-right');
-    }
-
-
+  navLinks.classList.toggle("menu_active");
+  if(menu.classList.contains("bi-x-circle"))
+  {
+    menu.classList.replace("bi-x-circle","bi-list" );
+  }
+  else{
+    menu.classList.replace("bi-list", "bi-x-circle" );
+  }
+  
 }
 window.onscroll = () => {
-    navbar.classList.remove('active');
+  navLinks.classList.remove('menu_active');
+  menu.classList.replace("bi-x-circle","bi-list" );
 }
-// Dark Mode
-let darkmode = document.querySelector('#darkmode');
- 
-darkmode.onclick = () => {
-    if(darkmode.classList.contains('bx-moon')){
-        darkmode.classList.replace('bx-moon','bx-sun');
-        document.body.classList.add('darkMode');
-    }else{
-        darkmode.classList.replace('bx-sun','bx-moon');
-        document.body.classList.remove('darkMode');
+const dynamicText = document.querySelector(".typewriter");
+const words = ["UI/UX Designer","Graphic Designer"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typeEffect = () => {
+    const currentWord = words[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
+    dynamicText.textContent = currentChar;
+
+    if (!isDeleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(typeEffect, 200);
+    } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(typeEffect, 100);
+    } else {
+        isDeleting = !isDeleting;
+        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+        setTimeout(typeEffect, 1200);
     }
 }
 
-function capitalizeFirstLetter(input) {
-    input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1);
-}
+typeEffect();
 
-function submitForm(event) {
-    event.preventDefault();
-
-    // Reset error messages
-    resetErrorMessages();
-
-    // Validate and submit the form
-    if (validateForm()) {
-        displaySuccessMessage();
-        resetForm();
-    }
+function capitalizeFirstLetter(element) {
+  element.value = element.value.charAt(0).toUpperCase() + element.value.slice(1);
 }
 
 function validateForm() {
-    let isValid = true;
+  let form = document.getElementById('myForm');
+  let elements = form.elements;
+  let valid = true;
 
-    const firstName = document.getElementById("firstName");
-    const lastName = document.getElementById("lastName");
-    const gmailId = document.getElementById("gmailId");
-    const subject = document.getElementById("subject");
-    const phoneNumber = document.getElementById("phoneNumber");
-    const message = document.getElementById("message");
-
-    isValid &= validateInput(firstName, "firstNameError", /^[a-zA-Z]+$/, "Invalid first name");
-    isValid &= validateInput(lastName, "lastNameError", /^[a-zA-Z]+$/, "Invalid last name");
-    isValid &= validateInput(gmailId, "gmailIdError", /^\S+@gmail.com\S+\.\S+$/, "Invalid Gmail ID");
-    isValid &= validateInput(subject, "subjectError", /\S/, "Subject cannot be empty");
-    isValid &= validateInput(phoneNumber, "phoneNumberError", /^[0-9]{10}$/, "Invalid phone number");
-    isValid &= validateInput(message, "messageError", /\S/, "Message cannot be empty");
-
-    return isValid;
-}
-
-function validateInput(input, errorId, pattern, errorMessage) {
-    const value = input.value.trim();
-
-    if (!pattern.test(value)) {
-        displayErrorMessage(errorId, errorMessage);
-        return false;
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i].type !== 'button') {
+      if (elements[i].value.trim() === '') {
+        valid = false;
+        elements[i].placeholder = '';
+      }
     }
+  }
 
-    return true;
-}
-
-function displayErrorMessage(errorId, errorMessage) {
-    const errorElement = document.getElementById(errorId);
-    errorElement.textContent = errorMessage;
-}
-
-function resetErrorMessages() {
-    const errorElements = document.querySelectorAll(".error");
-    errorElements.forEach((element) => {
-        element.textContent = "";
-    });
-}
-
-function displaySuccessMessage() {
-    const successMessage = document.getElementById("successMessage");
-    successMessage.textContent = "Message sent successfully!";
-}
-
-function resetForm() {
-    const form = document.getElementById("box-1");
-    form.reset();
+  if (valid) {
+    alert('Message Sent Successfully.');
+  }
+  if(!valid){
+    alert("Couldn't Send Message.");
+  }
 }
