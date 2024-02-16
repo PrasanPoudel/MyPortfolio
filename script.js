@@ -1,23 +1,28 @@
+const darkModeBtn= document.querySelector('#darkModeBtn');
+const body= document.querySelector('body')
+darkModeBtn.onclick=()=>{
+body.classList.toggle('darkMode');
+}
 const menu= document.querySelector("#menuBtn");
 const navLinks= document.querySelector(".navLinks");
 menu.onclick=()=>{
  
   navLinks.classList.toggle("menu_active");
-  if(menu.classList.contains("bi-x-circle"))
+  if(menu.classList.contains("bx-x-circle"))
   {
-    menu.classList.replace("bi-x-circle","bi-list" );
+    menu.classList.replace("bx-x-circle","bx-menu-alt-right" );
   }
   else{
-    menu.classList.replace("bi-list", "bi-x-circle" );
+    menu.classList.replace("bx-menu-alt-right", "bx-x-circle" );
   }
   
 }
 window.onscroll = () => {
   navLinks.classList.remove('menu_active');
-  menu.classList.replace("bi-x-circle","bi-list" );
+  menu.classList.replace("bx-x-circle","bx-menu-alt-right" );
 }
 const dynamicText = document.querySelector(".typewriter");
-const words = ["UI/UX Designer","Graphic Designer"];
+const words = ["Frontend Developer","React Js Developer" , "Web Developer"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
