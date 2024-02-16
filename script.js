@@ -1,7 +1,26 @@
 const darkModeBtn= document.querySelector('#darkModeBtn');
-const body= document.querySelector('body')
-darkModeBtn.onclick=()=>{
-body.classList.toggle('darkMode');
+const body= document.querySelector('body');
+document.addEventListener('DOMContentLoaded', function(){
+if (localStorage.getItem('darkMode')==="enabled"){
+  body.classList.add('darkMode');                   
+}else{
+  body.classList.remove('darkMode');
+}
+});
+function darkModeToggle(){
+if(localStorage.getItem('darkMode')==="disabled")
+{
+  body.classList.add('darkMode');
+  localStorage.setItem('darkMode',"enabled");
+  isDark=false;
+  console.log('dark mode enabled.')
+}
+else{
+  body.classList.remove('darkMode');
+  localStorage.setItem('darkMode',"disabled");
+  isDark=true;
+  console.log('dark mode disabled.');
+}
 }
 const menu= document.querySelector("#menuBtn");
 const navLinks= document.querySelector(".navLinks");

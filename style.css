@@ -3,7 +3,6 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
@@ -19,27 +18,9 @@
   --text-color:#000;
   --secondaryColor:blue;
 }
-
-@keyframes moving {
-  0%{
-    transform: translateX(0);
-  }
-  35%{
-    transform: translateX(-50%);
-  }
-  65%{
-  transform: translateX(50%);
-  }
-  100%{
-    transform: translateX(0);
-  }
-}
 header,section{
   padding: 0 7.5%;
   width: 100%;
-}
-section{
-  padding: 7.5%;
 }
 .top{
   background: var(--primaryColor);
@@ -69,6 +50,7 @@ header{
   font-size: 2rem;
   position: relative;
   cursor: pointer;
+  font-weight: 600
 }
 .navLinks a::before{
   content: "";
@@ -81,14 +63,6 @@ header{
 }
 .navLinks a:hover::before{
   width: 100%;
-}
-.hireBtn{
-  background: var(--primaryColor);
-  border: none;
-  padding: 10px;
-  border-radius: 15px;
-  font-weight: 600;
-  cursor: pointer;
 }
 .hireBtn a{
   color: #fff;
@@ -113,7 +87,7 @@ header{
 display: grid;
 grid-template-columns: 60% 40%;
 height: 75vh;
-margin-bottom: 200px;
+margin-bottom: 100px;
 }
 .hero .heroText{
   display: flex;
@@ -123,11 +97,6 @@ margin-bottom: 200px;
 .greet{
   font-weight: 600;
   font-size: 2.5rem;
-}
-.myName{
-  color: var(--primaryColor);
-  font-size: 5rem;
-  background-size: cover;
 }
 .transparentText{
   font-size: 5rem;
@@ -140,6 +109,33 @@ margin-bottom: 200px;
   height: auto;
   min-height: 100px;
   margin-bottom: 10px;
+}
+.location{
+  display: flex;  
+  font-size: 3rem;
+  align-items: center;
+  gap:10px;
+}
+.location i{
+  font-size: 5rem;
+  padding: 10px;
+}
+.location img{
+  height: 2rem;
+}
+.mySocials ul li{
+  display: flex;
+  gap: 25px;
+}
+.mySocials ul li a i{
+  font-size: 5rem;
+  border-radius: 50px;
+  margin: 10px 0;
+  padding: 10px;
+}
+.mySocials ul li a i:hover{
+  background: var(--primaryColor);
+  color: #fff;
 }
 .heroImg img{
   height: 400px;
@@ -174,19 +170,6 @@ margin-bottom: 200px;
   color: #fff;
   font-weight: 500;
   text-decoration: none;
-}
-.mySocials ul li{
-  display: flex;
-  gap: 25px;
-}
-.mySocials ul li a i{
-  color: var(--text);
-  font-size: 3.3rem;
-  border-radius: 50px;
-  padding: 10px;
-}
-.mySocials ul li a i:hover{
-  background: var(--primaryColor);
 }
 @media screen and (max-width:1200px){
   .hero{
@@ -233,14 +216,31 @@ margin-bottom: 200px;
 .about{
   display: grid;
   grid-template-columns: 40% 50%;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   height: auto;
   justify-content: space-between;
-  z-index: 1;
+  
 }
 .about-Box1{
-  background-color: yellow;
   height: 100%;
+}
+fieldset {
+  border: 5px dashed var(--text-color);
+}
+fieldset ul{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+fieldset ul li i{
+  font-size: 4rem;
+} 
+fieldset ul li{
+  display: flex;
+  gap: 25px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgba(100, 100, 100, 1);
 }
 .about-Box2{
   display: flex;
@@ -248,31 +248,35 @@ margin-bottom: 200px;
 }
 .why{
   font-size: 5rem;
-  z-index: 1;
+  
 }
 .secondaryColor{
   font-size: 5rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   color: var(--text-color);
-  z-index: 1;
+  
 }
 .primaryColor{
   color: var(--primaryColor);
   font-size: 5rem;
-  z-index: 1;
+  
 }
 .explanation{
   margin-top: 20px;
   font-size: 1.5rem;
-  z-index: 1;
   text-align: justify;
   font-weight: 500;
+  color: rgba(100, 100, 100, 1);
 }
-.aboutBtn{
-  margin-top: 20px;
+.hireBtn{
+  background: var(--primaryColor);
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  margin-top: 25px;
   width: 100px;
-  z-index: 1;
   cursor: pointer;
 }
 
@@ -286,11 +290,102 @@ margin-bottom: 200px;
     gap: 100px;
 
   }
+  fieldset legend{
+    text-align: center;
+  }
+}
+/* testimonials section */
+.testimonials{
+  margin: 100px 0 100px 0;
+}
+.testimonialHeading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonialTitle{
+  font-size: 2rem;
+  color: var(--primaryColor);
+}
+.testimonialHeading{
+  display: flex;
+  flex-direction: column;
+}
+.testimonialText{
+  font-size: 5rem;
+  margin-bottom: 25px;
+}
+.clientTestimonials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.clientTestimonial{
+  display: flex;
+  width: 400px;
+  box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(100, 100, 100, 1);
+  border-radius: 10px;
+}
+.clientImage{
+  padding: 25px;
+  position: relative;
+  margin-left: -50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.clientTestimonialComment{
+  display: flex;
+  flex-direction: column;
+}
+.quote i{
+  font-size: 5rem;
+  color: rgba(254, 109, 52, 1);
+}
+.comment , .client{
+  padding: 10px;
+}
+.comment{
+  font-size: 1.5rem;
+  text-align: justify;
+  color: rgba(100, 100, 100, 1);
+}
+.clientName{
+  font-size: 2rem;
+  color: var(--primaryColor);
+}
+.clientPost{
+  font-size: 1.5rem;
+  color: rgba(100, 100, 100, 1);
 }
 
+@media screen and (max-width:1200px) {
+  :root{
+    font-size: 7.5px;
+  }
+  .testimonials .primaryColor{
+    font-size: 3.3rem;
+  }
+  .testimonials .secondaryColor{
+    font-size: 3.3rem;
+  }
+  .testimonialText{
+    font-size: 3.3rem;
+  }
+  .comment{
+    font-size: 1.2rem;
+  }
+  .clientTestimonial{
+    width: 300px;
+  }
+}
 /* contact  section*/
 .form-wrap{
-  width:100%;
+  border-top-left-radius:50px;
+  border-top-right-radius:50px;
+  width:90%;
+  margin: 0 auto 0 auto;
   padding:35px 25px 35px 25px;
   background-color: rgba(245, 245, 245, 1);
   border-bottom:5px solid var(--primaryColor);
@@ -312,6 +407,7 @@ form{
 }
 .form-fields input,
 .form-fields textarea{
+  color: rgba(100, 100, 100, 1);
   font-weight: 500;
   border: none;
   outline:none;
@@ -365,6 +461,34 @@ form{
     width: 100%;
   }
 }
+/* myskills section */
+.myskills{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.myskillsTitle p{
+  font-size: 3.3rem;
+  color: var(--primaryColor);
+  font-weight: 600;
+}
+.skills ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.myskills ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.skills ul li i{
+  font-size: 10rem;
+}
+
 
 /* footer section */
 footer{
@@ -380,14 +504,13 @@ footer{
     gap: 10px;
   }
   footer ul li a i{
-    font-size: 3.3rem;
-    color: var(--primaryColor);
+    font-size: 5rem;
     border-radius: 50px;
     padding: 10px;
   }
   footer ul li a i:hover{
-    color: #fff;
     background: var(--primaryColor);
+    color: #fff;
     }
   .copyright{
     font-size: 1.5rem;

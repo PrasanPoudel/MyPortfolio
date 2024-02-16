@@ -22,7 +22,7 @@
       <li><a href="#contact">Contact Me</a></li>
       </ul>
     </div>
-    <button id="darkModeBtn" class='bx bx-moon'></button>
+    <button id="darkModeBtn" class='bx bx-moon' onclick="darkModeToggle()"></button>
     <div id="menuBtn" class="bx bx-menu-alt-right"></div> 
   </header>
   <section class="hero" id="hero">
@@ -37,6 +37,7 @@ Poudel</span></h1>
 <p class="typewriter">
   <!-- UI/UX & Graphic Designer -->
 </p>
+<p class="location"><i class='bx bxs-location-plus'></i>Nepal<img src="./images/NepalFlag.png" alt=""></p>
 <div class="mySocials">
 <ul>
   <li>
@@ -48,7 +49,7 @@ Poudel</span></h1>
 </ul>
 </div>
 <div class="heroBtn">
-  <button class="downloadCV"><a href="#">Download CV</a></button>
+  <button class="downloadCV"><a href="./portfolio.pdf">Download CV</a></button>
   <a href="#">Let's Talk</a>
 </div>
     </div>
@@ -58,18 +59,107 @@ Poudel</span></h1>
   </section>
   
   <section class="about" id="about">
-<div class="about-Box1"></div>
+  <fieldset class="about-Box1">
+    <legend class="primaryColor">Prasan Poudel</legend>
+    <ul>
+      <li>
+        <i class='bx bxs-briefcase'></i>
+        React JS developer, Web developer
+      </li>
+      <li>
+        <i class='bx bxl-gmail'></i>
+        prasanpoudel501@gmail.com
+      </li>
+      <li>
+        <i class='bx bxs-location-plus'></i>
+        Buddhabhumi-9,Kapilvastu
+      </li>
+      <li>
+        <i class='bx bxs-phone'></i>
+        +977-9841098***
+      </li>
+    </ul>
+  </fieldset>
 <div class="about-Box2">
   <p class="why">
-    Why you should <span class="secondaryColor">hire me</span> for your <span class="primaryColor">next</span> <span class="primaryColor">project</span>?
+    Why you should <span class="secondaryColor">hire me</span> for your <span class="primaryColor">next </span><span class="primaryColor">project</span>?
   </p>
 <p class="explanation">
   I'm a highly skilled web developer and also a computer science student with a passion for creating amazing and engaging web applications. I am currently studying bachelor in computer science and information technology from Tribhuvan University of Nepal. I am highly skilled in working with technologies like HTML, CSS, Tailwind, SASS, JavaScript along with React Js and also tools like git & github.
 </p>
 <p class="explanation"> I am always looking for new challenges and opportunities to expand my skill set. I am passionate about creating innovative and effective web solutions that make a fulfillment in my client's demand.
 </p>
-<button class="hireBtn aboutBtn"><a href="mailto:">Hire Me</a></button>
+<button class="hireBtn"><a href="mailto:prasanpoudel501@gmail.com">Hire Me</a></button>
 </div>
+  </section>
+  <section class="myskills">
+    <div class="myskillsTitle">
+      <p>My skills</p>
+    </div>
+    <div class="skills">
+      <ul>
+        <li><i class='bx bxl-html5'></i>HTML</li>
+        <li><i class='bx bxl-css3'></i>CSS</li>
+        <li><i class='bx bxl-sass' ></i>SASS</li>
+        <li><i class='bx bxl-tailwind-css' ></i>Tailwind</li>
+        <li><i class='bx bxl-javascript' ></i>JavaScript</li>
+        <li><i class='bx bxl-react'></i>React Js</li>
+        <li><i class='bx bxl-github'></i>GitHub</li>
+      </ul>
+    </div>
+  </section>
+  <section class="testimonials">
+    <div class="testimonialHeading">
+    <p class="testimonialTitle">Testimonials</p>
+    <p class="testimonialText">
+      What <span class="secondaryColor">my client</span> have </p>
+      <p class="testimonialText"> to say <span class="primaryColor">about me</span>
+    </p>
+    </div>
+    <div class="clientTestimonials">
+      <div class="clientTestimonial">
+        <div class="clientImage">
+  <img src="./images/client1.png" alt="">
+        </div>
+        <div class="clientTestimonialComment">
+          <div class="quote">
+            <i class='bx bxs-quote-alt-left'></i>
+          </div>
+          <div class="comment">
+            Impressed by the UI/UX genius! The designer created a seamless journey for our users, and the graphic design work is nothing short of amazing. Every detail is thoughtfully crafted, resulting in a visually cohesive and engaging experience.
+          </div>
+          <div class="client">
+            <p class="clientName">
+              Sagar Dhakal
+            </p>
+            <p class="clientPost">
+              Managing Director, Avata Wellness Center
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="clientTestimonial">
+        <div class="clientImage">
+  <img src="./images/client2.png" alt="">
+        </div>
+        <div class="clientTestimonialComment">
+          <div class="quote">
+            <i class='bx bxs-quote-alt-left'></i>
+          </div>
+          <div class="comment">
+            Our experience with this graphic designer was outstanding. From logos to marketing materials, every design reflects a deep understanding of our vision. The designer's creativity and professionalism shine through in every project. Impressive work!
+          </div>
+          <div class="client">
+            <p class="clientName">
+              Amrit Sparsha
+            </p>
+            <p class="clientPost">
+              Chief Executive Officer, Order
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 <section class="form-wrap" id="contact">
   <form id="myForm">
