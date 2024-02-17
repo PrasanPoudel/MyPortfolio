@@ -21,10 +21,14 @@
 }
 body{
   background-color: var(--background-color);
+  overflow-x: hidden;
 }
-header,section{
+header,section,footer{
   padding: 0 7.5%;
   width: 100%;
+}
+section,footer{
+overflow: hidden;
 }
 /* header */
 .top{
@@ -89,7 +93,6 @@ header{
   .navLinks{
     padding: auto;
     display: flex;
-    z-index: 10;
     background-color: var(--primaryColor);
     position: absolute;
     top: 150px;

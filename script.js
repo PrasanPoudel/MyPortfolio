@@ -1,22 +1,22 @@
 const darkModeBtn= document.querySelector('#darkModeBtn');
 const body= document.querySelector('body');
 document.addEventListener('DOMContentLoaded', function(){
-if (localStorage.getItem('darkMode')==="enabled"){
-  body.classList.add('darkMode');
-  darkModeBtn.classList.replace('bx-moon','bx-sun');
-}
-else if(localStorage.getItem('darkMode')==null){
-  body.classList.add('darkMode');
-  darkModeBtn.classList.replace('bx-moon','bx-sun');                   
-}else{
-  body.classList.remove('darkMode');
-}
+  if (localStorage.getItem('darkMode')==="enabled"){
+    body.classList.add('darkMode');
+    darkModeBtn.classList.replace('bx-moon','bx-sun');
+  }
+  else if(localStorage.getItem('darkMode')==null){
+    body.classList.add('darkMode');
+    darkModeBtn.classList.replace('bx-moon','bx-sun');                   
+  }else{
+    body.classList.remove('darkMode');
+  }
 });
 function darkModeToggle(){
-if(localStorage.getItem('darkMode')==="disabled")
-{
-  body.classList.add('darkMode');
-  darkModeBtn.classList.replace('bx-moon','bx-sun');
+  if(localStorage.getItem('darkMode')==="disabled")
+  {
+    body.classList.add('darkMode');
+    darkModeBtn.classList.replace('bx-moon','bx-sun');
   localStorage.setItem('darkMode',"enabled");
 }
 else{
@@ -28,7 +28,7 @@ else{
 const menu= document.querySelector("#menuBtn");
 const navLinks= document.querySelector(".navLinks");
 menu.onclick=()=>{
- 
+  
   navLinks.classList.toggle("menu_active");
   if(menu.classList.contains("bx-x-circle"))
   {
@@ -50,47 +50,32 @@ let charIndex = 0;
 let isDeleting = false;
 
 const typeEffect = () => {
-    const currentWord = words[wordIndex];
-    const currentChar = currentWord.substring(0, charIndex);
-    dynamicText.textContent = currentChar;
-
-    if (!isDeleting && charIndex < currentWord.length) {
-        charIndex++;
-        setTimeout(typeEffect, 200);
-    } else if (isDeleting && charIndex > 0) {
-        charIndex--;
-        setTimeout(typeEffect, 100);
+  const currentWord = words[wordIndex];
+  const currentChar = currentWord.substring(0, charIndex);
+  dynamicText.textContent = currentChar;
+  
+  if (!isDeleting && charIndex < currentWord.length) {
+    charIndex++;
+    setTimeout(typeEffect, 200);
+  } else if (isDeleting && charIndex > 0) {
+    charIndex--;
+    setTimeout(typeEffect, 100);
     } else {
-        isDeleting = !isDeleting;
-        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
-        setTimeout(typeEffect, 1200);
+      isDeleting = !isDeleting;
+      wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+      setTimeout(typeEffect, 1200);
     }
-}
-
-typeEffect();
-
+  }
+  
+  typeEffect();
+  
 function capitalizeFirstLetter(element) {
   element.value = element.value.charAt(0).toUpperCase() + element.value.slice(1);
 }
-
-function validateForm() {
-  let form = document.getElementById('myForm');
-  let elements = form.elements;
-  let valid = true;
-
-  for (let i = 0; i < elements.length; i++) {
-    if (elements[i].type !== 'button') {
-      if (elements[i].value.trim() === '') {
-        valid = false;
-        elements[i].placeholder = '';
-      }
-    }
-  }
-
-  if (valid) {
-    alert('Message Sent Successfully.');
-  }
-  if(!valid){
-    alert("Couldn't Send Message.");
-  }
-}
+const submitBtn=document.querySelector('.submitBtn');
+submitBtn.addEventListener('click',function(event)
+{
+  event.preventDefault();
+  alert("Couldn't Send Message.");
+  document.querySelector('#myForm').reset();
+  });
