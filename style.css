@@ -14,16 +14,19 @@
 :root{
   font-size: var(--font-size);
   --font-size:10px;
-  --darkModeBackground:#000;
+  --background-color:#fff;
   --primaryColor:#00305F;
   --text-color:rgba(100, 100, 100, 1);
-  --secondaryColor:blue;
   --icon-color:#000;
+}
+body{
+  background-color: var(--background-color);
 }
 header,section{
   padding: 0 7.5%;
   width: 100%;
 }
+/* header */
 .top{
   background: var(--primaryColor);
   height: 25px;
@@ -49,6 +52,7 @@ header{
   gap: 35px;
 }
 .navLinks ul li a{
+  color: var(--icon-color);
   font-size: 2rem;
   position: relative;
   cursor: pointer;
@@ -59,16 +63,12 @@ header{
   position: absolute;
   bottom: -2.5px;
   height: 2.5px;
-  border-radius: 10px;
+  border-radius: 50px;
   width: 0;
   background: var(--primaryColor);
 }
 .navLinks a:hover::before{
   width: 100%;
-}
-.hireBtn a{
-  color: #fff;
-  font-size: 2rem;
 }
 #menuBtn{
   display: none;
@@ -84,8 +84,39 @@ header{
   to{
     transform: scale(1.5);
   }
-  
 }
+@media screen and (max-width:1200px) {
+  .navLinks{
+    padding: auto;
+    display: flex;
+    z-index: 10;
+    background-color: var(--primaryColor);
+    position: absolute;
+    top: 150px;
+    width: 80%;
+    height: 75vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  #menuBtn{
+    display: block;
+      cursor: pointer;
+    }
+    .navLinks ul{
+      flex-direction: column;
+    }
+    .navLinks ul li a{
+      color: #fff;
+      font-size: 3.3rem;
+    }
+    .menu_active{
+      display: flex;
+    }
+  }
+
+/* hero section */
 .hero{
 display: grid;
 grid-template-columns: 60% 40%;
@@ -97,7 +128,6 @@ height: 75vh;
   padding-top: 150px;
 }
 .greet{
-  font-weight: 600;
   font-size: 2.5rem;
 }
 .typewriter {
@@ -106,24 +136,6 @@ height: 75vh;
   min-height: 100px;
   margin-bottom: 10px;
   color: var(--icon-color);
-}
-.location{
-  display: flex;  
-  font-size: 3rem;
-  align-items: center;
-  gap:10px;
-}
-.location i{
-  font-size: 5rem;
-  padding: 10px;
-  color: var(--icon-color);
-}
-.location span{
-  font-size: 2rem;
-  color: var(--icon-color);
-}
-.location img{
-  height: 2rem;
 }
 .mySocials ul li{
   display: flex;
@@ -138,13 +150,14 @@ height: 75vh;
 }
 .mySocials ul li a i:hover{
   background: var(--primaryColor);
+  color: #fff;
 }
 .heroImg img{
   height: 400px;
   width: 100%;
   background-color: var(--primaryColor);
   border-radius: 50%;
-  border: var(--icon-color) 5px dashed;
+  border: var(--background-color) 5px dashed;
 }
 .heroImg{
   padding: 10%;
@@ -158,7 +171,6 @@ height: 75vh;
   color: var(--primaryColor);
   text-decoration: underline;
   font-size: 2.5rem;
-  font-weight: 600;
 }
 .downloadCV{
   background: var(--primaryColor);
@@ -186,34 +198,6 @@ height: 75vh;
 .heroImg img{
   height: 300px;
 }
-.navLinks{
-  padding: auto;
-  display: flex;
-  z-index: 10;
-  background-color: var(--primaryColor);
-  position: absolute;
-  top: 150px;
-  width: 80%;
-  height: 75vh;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
-#menuBtn{
-  display: block;
-    cursor: pointer;
-  }
-  .navLinks ul{
-    flex-direction: column;
-  }
-  .navLinks ul li a{
-    color: #fff;
-    font-size: 3.3rem;
-  }
-  .menu_active{
-    display: flex;
-  }
 }
 
 
@@ -224,15 +208,15 @@ height: 75vh;
   padding-bottom: 50px;
   height: auto;
   justify-content: space-between;
-  margin-top: 100px;
-  
+  margin-top: 100px; 
 }
 .about-Box1{
   height: 100%;
 }
 fieldset {
   border: 5px dashed var(--icon-color);
-  padding: 15px 0 0 10px;
+  padding: 10px;
+  border-top-left-radius:25px;
 }
 fieldset ul{
   display: flex;
@@ -243,12 +227,9 @@ fieldset ul li i{
   font-size: 4rem;
   color: var(--icon-color);
 } 
-fieldset ul li i:hover{
-  background-color: var(--primaryColor);
-  color: #fff;
-  border-radius: 50px;
-  padding: 10px;
-} 
+.NepalFlag{
+  height: 3rem;
+}
 fieldset ul li{
   display: flex;
   gap: 25px;
@@ -263,19 +244,16 @@ fieldset ul li{
 .headingText{
   font-size: 5rem;
   color: var(--icon-color);
-  text-align: center;
 }
-.secondaryColor{
+.transparentText{
   font-size: 5rem;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   color: var(--text-color);
-  
 }
 .primaryColor{
   color: var(--primaryColor);
   font-size: 5rem;
-  
 }
 .explanation{ 
   font-size: 2rem;
@@ -288,11 +266,14 @@ fieldset ul li{
   background: var(--primaryColor);
   border: none;
   padding: 10px;
-  border-radius: 15px;
-  font-weight: 600;
+  border-radius: 10px;
   margin-top: 25px;
   width: 100px;
   cursor: pointer;
+}
+.hireBtn a{
+  color: #fff;
+  font-size: 2rem;
 }
 
 @media screen and (max-width:1200px) {
@@ -316,7 +297,7 @@ fieldset ul li{
   align-items: center;
 }
 .testimonialTitle{
-  font-size: 2rem;
+  font-size: 3.3rem;
   color: var(--primaryColor);
 }
 .testimonialHeading{
@@ -335,7 +316,8 @@ fieldset ul li{
   display: flex;
   width: 400px;
   box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(100, 100, 100, 1);
-  border-radius: 10px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 .clientImg{
   padding: 25px;
@@ -378,7 +360,7 @@ fieldset ul li{
   .testimonials .primaryColor{
     font-size: 3.3rem;
   }
-  .testimonials .secondaryColor{
+  .testimonials .transparentText{
     font-size: 3.3rem;
   }
   .testimonials .testimonialHeading .headingText{
@@ -391,19 +373,175 @@ fieldset ul li{
     width: 300px;
   }
 }
+/* mySkills section */
+.mySkills{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.mySkillsTitle p{
+  font-size: 3.3rem;
+  color: var(--primaryColor);
+}
+.skills ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mySkills ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--icon-color);
+}
+.skills ul li i{
+  font-size: 10rem;
+  color: var(--icon-color);
+}
+/* projects section */
+.projects{
+display: flex;
+flex-direction: column;
+margin-top: 100px;
+}
+.allProjects{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+}
+.projectsTitle{
+  font-size: 3.3rem;
+  color: var(--primaryColor);
+}
+.projects-Box1, .projects-Box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects-Box1 div{
+  margin-top: 50px;
+}
+.project{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 5px solid black;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.project img{
+  width: 100%;
+  height: 100%;
+}
+.overlay p{
+  font-size: 3.5rem;
+  color: #fff;
+}
+.overlay p i{
+  font-size: 2rem;
+  color: #fff;
+  padding-left: 10px;
+}
+.overlay p a{
+  font-size: 2rem;
+  color: #fff;
+  position: relative;
+  font-weight: 500;
+}
+.overlay p a::before{
+  content: "";
+  position: absolute;
+  bottom: -2.5px;
+  width: 100%;
+  background-color: #fff;
+  height: 1.5px;
+  transition: all ease 0.5s;
+}
+.overlay p a:hover::before{
+  height: 3.5px;
+  animation: underline 1s linear;
+}
+@keyframes underline {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+.overlay{
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  background-color: var(--primaryColor);
+  justify-content: center;
+  padding:25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+}
+.project:hover .overlay{
+  display: flex;
+  opacity: 0.9;
+}
+.allProjectsLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.allProjectsLink a{
+  font-size: 3.3rem;
+  color: var(--icon-color);
+  position: relative;
+}
+.allProjectsLink a:before{
+  content: "";
+  position: absolute;
+  bottom: -2.5px;
+  height: 5px;
+  background-color: var(--icon-color);
+  width: 100%;
+  border-radius: 50px;
+}
+.allProjectsLink a:hover::before{
+  animation: underline 1s linear;
+}
+.allProjectsLink a i{
+  color: var(--icon-color);
+}
+@media screen and (max-width:1200px) {
+  .allProjects{
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+  .projects-Box1 .headingText, .primaryColor{
+    font-size: 4rem;
+  }
+  .projects-Box1 .headingText, .transparentText{
+    font-size: 4rem;
+  }
+  .overlay p{
+    font-size: 2.5rem;
+  }
+}
 /* contact  section*/
-.form-wrap{
-  border-top-left-radius:50px;
-  border-top-right-radius:50px;
+.contact{
+  border-top-left-radius:25px;
   width:90%;
   margin: 0 auto 0 auto;
   padding:35px 25px 35px 25px;
   background-color: rgba(245, 245, 245, 1);
   border-bottom:5px solid var(--primaryColor);
 }
-.form-title{
+.formTitle{
   text-align: center;
-  font-size: 2rem;
+  font-size: 3.3rem;
   color: var(--primaryColor);
 }
 form{
@@ -437,7 +575,7 @@ form{
   padding: 0px 30px;
   margin: 14px 12px;
   border-radius: 25px;
-  box-shadow: inset 8px 8px 8px #cbcbcb, inset -8px -8px 8px #ffffff;
+  box-shadow: inset 8px 8px 8px #cbcbcb, inset -8px -8px 8px #fff;
 }
 .form-fields .form-group:last-child {
   width: 92%;
@@ -446,19 +584,18 @@ form{
   width: 35%;
   height: 75px;
   border-radius: 30px;
-  font-size: 2rem;;
-  font-weight: 600;
+  font-size: 2rem;
   outline: none;
   border:none;
   cursor: pointer;
-  color:white;
+  color:#fff;
   text-align: center;
   background: var(--primaryColor);
   box-shadow: 5px 5px 10px #b1b1b1, -5px -5px 10px #fff;
   transition: 0.5s;
 }
 @media screen and (max-width: 1200px) {
-  .form-wrap{
+  .contact{
     width: 100%;
     height: inherit;
     float: none;  
@@ -472,36 +609,6 @@ form{
     width: 100%;
   }
 }
-/* myskills section */
-.myskills{
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-.myskillsTitle p{
-  font-size: 3.3rem;
-  color: var(--primaryColor);
-  font-weight: 600;
-}
-.skills ul{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.myskills ul li{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--icon-color);
-}
-.skills ul li i{
-  font-size: 10rem;
-  color: var(--icon-color);
-}
-
 
 /* footer section */
 footer{
@@ -511,6 +618,7 @@ footer{
   align-items: center;
   gap: 25px;
   padding: 25px 0;
+  background-size: cover;
 }
 footer ul li{
   display: flex;
@@ -523,7 +631,7 @@ footer ul li{
 
 /* darkmode */
 .darkMode{
-  background-color: var(--darkModeBackground);
+  --background-color:#000;
   --icon-color:#fff;
   --primaryColor: #27AE60;
   --text-color: rgba(100, 100, 100, 1);

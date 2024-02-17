@@ -2,7 +2,12 @@ const darkModeBtn= document.querySelector('#darkModeBtn');
 const body= document.querySelector('body');
 document.addEventListener('DOMContentLoaded', function(){
 if (localStorage.getItem('darkMode')==="enabled"){
-  body.classList.add('darkMode');                   
+  body.classList.add('darkMode');
+  darkModeBtn.classList.replace('bx-moon','bx-sun');
+}
+else if(localStorage.getItem('darkMode')==null){
+  body.classList.add('darkMode');
+  darkModeBtn.classList.replace('bx-moon','bx-sun');                   
 }else{
   body.classList.remove('darkMode');
 }
@@ -11,15 +16,13 @@ function darkModeToggle(){
 if(localStorage.getItem('darkMode')==="disabled")
 {
   body.classList.add('darkMode');
+  darkModeBtn.classList.replace('bx-moon','bx-sun');
   localStorage.setItem('darkMode',"enabled");
-  isDark=false;
-  console.log('dark mode enabled.')
 }
 else{
   body.classList.remove('darkMode');
+  darkModeBtn.classList.replace('bx-sun','bx-moon');
   localStorage.setItem('darkMode',"disabled");
-  isDark=true;
-  console.log('dark mode disabled.');
 }
 }
 const menu= document.querySelector("#menuBtn");
