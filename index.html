@@ -6,13 +6,14 @@
   <title>Prasan Poudel Portfolio.</title>
   <link rel="stylesheet" href="./style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="icon" href="./images/icon.webp">
 </head>
 <body>
   <div class="top">
     <div class="top_whiteLine"></div>
   </div>
-  <header>
+  <header data-aos="fade-down">
     <h1 class="primaryColor">Portfolio.</h1>
     <div class="navLinks">
       <ul> 
@@ -57,7 +58,7 @@ Poudel</span></h1>
   </section>
   
   <section class="about" id="about">
-  <fieldset class="about-Box1">
+  <fieldset class="about-Box1" data-aos="zoom-out-right">
     <legend class="primaryColor">Prasan Poudel</legend>
     <ul>
       <li>
@@ -82,7 +83,7 @@ Poudel</span></h1>
       </li>
     </ul>
   </fieldset>
-<div class="about-Box2">
+<div class="about-Box2" data-aos="zoom-out-left">
   <p class="headingText">
     Why you should <span class="transparentText">hire me</span> for your <span class="primaryColor">next </span><span class="primaryColor">project </span>?
   </p>
@@ -98,7 +99,7 @@ Poudel</span></h1>
     <div class="mySkillsTitle">
       <p>My skills</p>
     </div>
-    <div class="skills">
+    <div class="skills" data-aos="fade-down">
       <ul>
         <li><i class='bx bxl-html5'></i>HTML</li>
         <li><i class='bx bxl-css3'></i>CSS</li>
@@ -115,7 +116,7 @@ Poudel</span></h1>
   Projects
 </div>
 <div class="allProjects">
-<div class="projects-Box1">
+<div class="projects-Box1" data-aos="fade-up-right">
   <p class="headingText">My <span class="primaryColor">latest</span></p><p class="headingText">awesome <span class="transparentText">projects</span></p>
   <div class="project">
     <img src="./images/project.jpg " alt="">
@@ -125,7 +126,7 @@ Poudel</span></h1>
     </div>
   </div>
 </div>
-<div class="projects-Box2">
+<div class="projects-Box2" data-aos="fade-down-left">
   <div class="project">
     <img src="./images/project.jpg " alt="">
     <div class="overlay">
@@ -133,14 +134,14 @@ Poudel</span></h1>
       <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
     </div>
   </div>
-  <div class="allProjectsLink">
+  <div class="allProjectsLink" data-aos="fade-left">
     <a href="./allProjects.html">All Projects <i class='bx bx-link-external'></i></a>
   </div>
 </div>
 </div>
 </section>
 
-  <section class="testimonials">
+  <section class="testimonials" data-aos="fade-down">
     <div class="testimonialHeading">
     <p class="testimonialTitle">Testimonials</p>
     <p class="headingText">
@@ -193,7 +194,7 @@ Poudel</span></h1>
       </div>
     </div>
   </section>
-<section class="contact" id="contact">
+<section class="contact" id="contact" data-aos="zoom-in">
   <form id="myForm">
       <h2 class="formTitle">Send us a message</h2>
       <div class="form-fields">
@@ -216,7 +217,7 @@ Poudel</span></h1>
       <input type="submit" value="Send Message" class="submitBtn" onclick="validateForm()">
   </form>
 </section>
-<footer>
+<footer data-aos="fade-up">
   <h1 class="primaryColor">
     Prasan
   <span class="transparentText">
@@ -235,4 +236,13 @@ Poudel</span></h1>
 </footer>
   <script src="./script.js"></script>
 </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script> 
+  AOS.init(
+    {
+      duration: 750
+    }
+  );
+  </script>
 </html>
