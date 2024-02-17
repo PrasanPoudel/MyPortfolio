@@ -12,11 +12,13 @@
   box-sizing: border-box;
 }
 :root{
-  font-size: 10px;
+  font-size: var(--font-size);
+  --font-size:10px;
   --darkModeBackground:#000;
   --primaryColor:#00305F;
-  --text-color:#000;
+  --text-color:rgba(100, 100, 100, 1);
   --secondaryColor:blue;
+  --icon-color:#000;
 }
 header,section{
   padding: 0 7.5%;
@@ -73,6 +75,7 @@ header{
   background-color: transparent;
   animation: scaling 3s infinite;
   font-size: 3.3rem;
+  color: var(--icon-color);
 }
 @keyframes scaling {
   from{
@@ -87,7 +90,6 @@ header{
 display: grid;
 grid-template-columns: 60% 40%;
 height: 75vh;
-margin-bottom: 100px;
 }
 .hero .heroText{
   display: flex;
@@ -98,17 +100,12 @@ margin-bottom: 100px;
   font-weight: 600;
   font-size: 2.5rem;
 }
-.transparentText{
-  font-size: 5rem;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  color: var(--primaryColor);
-}
 .typewriter {
   font-size: 3.3rem;
   height: auto;
   min-height: 100px;
   margin-bottom: 10px;
+  color: var(--icon-color);
 }
 .location{
   display: flex;  
@@ -119,6 +116,11 @@ margin-bottom: 100px;
 .location i{
   font-size: 5rem;
   padding: 10px;
+  color: var(--icon-color);
+}
+.location span{
+  font-size: 2rem;
+  color: var(--icon-color);
 }
 .location img{
   height: 2rem;
@@ -132,17 +134,17 @@ margin-bottom: 100px;
   border-radius: 50px;
   margin: 10px 0;
   padding: 10px;
+  color: var(--icon-color);
 }
 .mySocials ul li a i:hover{
   background: var(--primaryColor);
-  color: #fff;
 }
 .heroImg img{
   height: 400px;
   width: 100%;
   background-color: var(--primaryColor);
   border-radius: 50%;
-  border: white 10px dashed;
+  border: var(--icon-color) 5px dashed;
 }
 .heroImg{
   padding: 10%;
@@ -172,31 +174,34 @@ margin-bottom: 100px;
   text-decoration: none;
 }
 @media screen and (max-width:1200px){
+  :root{
+    --font-size: 9px;
+  }
   .hero{
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  height: 100vh;
-  }
-  .heroImg img{
-    height: 300px;
-  }
-  .navLinks{
-    padding: auto;
     display: flex;
-    z-index: 10;
-    background-color: var(--primaryColor);
-    position: absolute;
-    top: 150px;
-    width: 80%;
-    height: 75vh;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: none;
-  }
-  #menuBtn{
-    display: block;
+    flex-direction: column;
+  gap: 25px;
+  height: auto !important;
+}
+.heroImg img{
+  height: 300px;
+}
+.navLinks{
+  padding: auto;
+  display: flex;
+  z-index: 10;
+  background-color: var(--primaryColor);
+  position: absolute;
+  top: 150px;
+  width: 80%;
+  height: 75vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#menuBtn{
+  display: block;
     cursor: pointer;
   }
   .navLinks ul{
@@ -219,13 +224,15 @@ margin-bottom: 100px;
   padding-bottom: 50px;
   height: auto;
   justify-content: space-between;
+  margin-top: 100px;
   
 }
 .about-Box1{
   height: 100%;
 }
 fieldset {
-  border: 5px dashed var(--text-color);
+  border: 5px dashed var(--icon-color);
+  padding: 15px 0 0 10px;
 }
 fieldset ul{
   display: flex;
@@ -234,6 +241,13 @@ fieldset ul{
 }
 fieldset ul li i{
   font-size: 4rem;
+  color: var(--icon-color);
+} 
+fieldset ul li i:hover{
+  background-color: var(--primaryColor);
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px;
 } 
 fieldset ul li{
   display: flex;
@@ -246,9 +260,10 @@ fieldset ul li{
   display: flex;
   flex-direction: column;
 }
-.why{
+.headingText{
   font-size: 5rem;
-  
+  color: var(--icon-color);
+  text-align: center;
 }
 .secondaryColor{
   font-size: 5rem;
@@ -262,12 +277,12 @@ fieldset ul li{
   font-size: 5rem;
   
 }
-.explanation{
-  margin-top: 20px;
-  font-size: 1.5rem;
+.explanation{ 
+  font-size: 2rem;
   text-align: justify;
   font-weight: 500;
   color: rgba(100, 100, 100, 1);
+  margin-top: 25px;
 }
 .hireBtn{
   background: var(--primaryColor);
@@ -281,14 +296,11 @@ fieldset ul li{
 }
 
 @media screen and (max-width:1200px) {
-  :root{
-    font-size: 7.5px;
-  }
   .about{
     display: flex;
     flex-direction: column;
     gap: 100px;
-
+    
   }
   fieldset legend{
     text-align: center;
@@ -311,11 +323,8 @@ fieldset ul li{
   display: flex;
   flex-direction: column;
 }
-.testimonialText{
-  font-size: 5rem;
-  margin-bottom: 25px;
-}
 .clientTestimonials{
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,12 +337,17 @@ fieldset ul li{
   box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(100, 100, 100, 1);
   border-radius: 10px;
 }
-.clientImage{
+.clientImg{
   padding: 25px;
   position: relative;
   margin-left: -50px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+}
+.clientImg img{
+  height: 197px;
+  width: 120px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: var(--primaryColor);
 }
 .clientTestimonialComment{
   display: flex;
@@ -360,17 +374,14 @@ fieldset ul li{
   color: rgba(100, 100, 100, 1);
 }
 
-@media screen and (max-width:1200px) {
-  :root{
-    font-size: 7.5px;
-  }
+@media screen and (max-width:1200px) {  
   .testimonials .primaryColor{
     font-size: 3.3rem;
   }
   .testimonials .secondaryColor{
     font-size: 3.3rem;
   }
-  .testimonialText{
+  .testimonials .testimonialHeading .headingText{
     font-size: 3.3rem;
   }
   .comment{
@@ -484,48 +495,48 @@ form{
   align-items: center;
   font-size: 2rem;
   font-weight: 600;
+  color: var(--icon-color);
 }
 .skills ul li i{
   font-size: 10rem;
+  color: var(--icon-color);
 }
 
 
 /* footer section */
 footer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    padding: 25px 0;
-  }
-  footer ul li{
-    display: flex;
-    gap: 10px;
-  }
-  footer ul li a i{
-    font-size: 5rem;
-    border-radius: 50px;
-    padding: 10px;
-  }
-  footer ul li a i:hover{
-    background: var(--primaryColor);
-    color: #fff;
-    }
-  .copyright{
-    font-size: 1.5rem;
-  }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 0;
+}
+footer ul li{
+  display: flex;
+  gap: 10px;
+}
+.copyright{
+  font-size: 1.5rem;
+}
 
 
-  /* darkmode */
-  .darkMode{
-    background-color: var(--darkModeBackground);
-    --primaryColor: #27AE60;
-    --text-color:#fff;
-  }
-  #darkModeBtn{
-    background-color: transparent;
-    border: none;
+/* darkmode */
+.darkMode{
+  background-color: var(--darkModeBackground);
+  --icon-color:#fff;
+  --primaryColor: #27AE60;
+  --text-color: rgba(100, 100, 100, 1);
+}
+#darkModeBtn{
+  background-color: transparent;
+  border: none;
     font-size: 3.3rem;
     cursor: pointer;
+    color: var(--icon-color);
+  }
+  @media screen and (max-width:500px){
+    :root{
+      --font-size: 8px;
+    }
   }
