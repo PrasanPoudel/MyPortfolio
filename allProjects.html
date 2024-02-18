@@ -1,323 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>allProjects by Prasan Poudel</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="icon" href="./images/icon.webp">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  color: var(--text-color);
-  box-sizing: border-box;
-}
-:root{
-  font-size: var(--font-size);
-  --font-size:10px;
-  --background-color:#fff;
-  --primaryColor:#00305F;
-  --text-color:rgba(100, 100, 100, 1);
-  --icon-color:#000;
-}
-.primaryColor{
-  color: var(--primaryColor);
-  font-size: 5rem;
-}
-.transparentText{
-  font-size: 5rem;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  color: var(--text-color);
-}
-body{
-  background-color: var(--background-color);
-}
-header,section,footer{
-  padding: 0 7.5%;
-  width: 100%;
-}
-section,footer{
-  overflow-x: hidden;
-}
-/* header */
-.top{
-  background: var(--primaryColor);
-  height: 25px;
-  width: 100%;
-  position: relative;
-}
-.top_whiteLine{
-  background-color: #fff;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  bottom: 5px;
-}
-header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-}
-.navLinks ul{
-  display: flex;
-  gap: 35px;
-}
-.navLinks ul li a{
-  color: var(--icon-color);
-  font-size: 2rem;
-  position: relative;
-  cursor: pointer;
-  font-weight: 600
-}
-.navLinks a::before{
-  content: "";
-  position: absolute;
-  bottom: -2.5px;
-  height: 2.5px;
-  border-radius: 50px;
-  width: 0;
-  background: var(--primaryColor);
-}
-.navLinks a:hover::before{
-  width: 100%;
-}
-#menuBtn{
-  display: none;
-  background-color: transparent;
-  animation: scaling 3s infinite;
-  font-size: 3.3rem;
-  color: var(--icon-color);
-}
-@keyframes scaling {
-  from{
-    transform: scale(1);
-  }
-  to{
-    transform: scale(1.5);
-  }
-}
-@media screen and (max-width:1200px) {
-  .navLinks{
-    padding: auto;
-    display: flex;
-    background-color: var(--primaryColor);
-    position: absolute;
-    top: 150px;
-    width: 80%;
-    height: 75vh;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    margin: auto;
-  }
-  #menuBtn{
-    display: block;
-      cursor: pointer;
-    }
-    .navLinks ul{
-      flex-direction: column;
-    }
-    .navLinks ul li a{
-      color: #fff;
-      font-size: 3.3rem;
-    }
-    .menu_active{
-      display: flex;
-    }
-  }
-.landingPage{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(./images/background.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 70vh;
-}
-.landingPage p{
-  text-align: center;
-}
-.landingPage p i{
-  color: #fff;
-  font-size: 5rem;
-}
-.text1{
-  color: var(--primaryColor);
-  font-size: 5rem;
-}
-.text2{
-  font-size: 2rem;
-}
-.text3{
-  color: #fff;
-  font-size: 4rem;
-}
-  /* projects */
-  .projects{
-display: flex;
-flex-direction: column;
-margin-top: 100px;
-}
-.allProjectsTitle{
-  font-size: 5rem;
-  color: var(--icon-color);
-}
-.allProjects{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-}
-.project{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border: 5px solid black;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-}
-.project img{
-  z-index: -1 !important;
-  width: 100%;
-  height: 100%;
-}
-.overlay p{
-  font-size: 3.5rem;
-  color: #fff;
-}
-.overlay p i{
-  font-size: 2rem;
-  color: #fff;
-  padding-left: 10px;
-}
-.overlay p a{
-  font-size: 2rem;
-  color: #fff;
-  position: relative;
-  font-weight: 500;
-}
-.overlay p a::before{
-  content: "";
-  position: absolute;
-  bottom: -2.5px;
-  width: 100%;
-  background-color: #fff;
-  height: 1.5px;
-  transition: all ease 0.5s;
-}
-.overlay p a:hover::before{
-  height: 3.5px;
-  animation: underline 1s linear;
-}
-@keyframes underline {
-  from{
-    width: 0;
-  }
-  to{
-    width: 100%;
-  }
-}
-.overlay{
-  display: flex;
-  z-index: 1 !important;
-  flex-direction: column;
-  background-color: var(--primaryColor);
-  justify-content: center;
-  padding:25px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  opacity: 0;
-}
-.project:hover .overlay{
-  display: flex;
-  opacity: 0.9;
-}
-@media screen and (max-width:1200px) {
-  .allProjects{
-    grid-template-columns: 1fr;
-    row-gap: 50px;
-  }
-  .overlay p{
-    font-size: 2.5rem;
-  }
-}
-/* footer */
-  footer{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  padding: 25px 0;
-  background-size: cover;
-}
-footer ul li{
-  display: flex;
-  gap: 10px;
-}
-.mySocials ul li{
-  display: flex;
-  gap: 25px;
-}
-.mySocials ul li a i{
-  font-size: 5rem;
-  border-radius: 50px;
-  margin: 10px 0;
-  padding: 10px;
-  color: var(--icon-color);
-}
-.mySocials ul li a i:hover{
-  background: var(--primaryColor);
-  color: #fff;
-}
-.copyright{
-  font-size: 1.5rem;
-}
-
-
-/* darkmode */
-.darkMode{
-  --background-color:#000;
-  --icon-color:#fff;
-  --primaryColor: #27AE60;
-  --text-color: rgba(100, 100, 100, 1);
-}
-#darkModeBtn{
-  background-color: transparent;
-  border: none;
-    font-size: 3.3rem;
-    cursor: pointer;
-    color: var(--icon-color);
-  }
-  @media screen and (max-width:500px){
-    :root{
-      --font-size: 8px;
-    }
-  }
-  </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>allProjects by Prasan Poudel</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./images/icon.webp">
+    <link rel="stylesheet" href="allProjects.css">
 </head>
 <body>
   <div class="top">
     <div class="top_whiteLine"></div>
   </div>
-  <header data-aos="fade-down">
+  <header>
     <h1 class="primaryColor">Portfolio.</h1>
     <div class="navLinks">
       <ul> 
@@ -330,68 +26,68 @@ footer ul li{
     <button id="darkModeBtn" class='bx bx-moon' onclick="darkModeToggle()"></button>
     <div id="menuBtn" class="bx bx-menu-alt-right"></div> 
   </header>
-<section class="landingPage">
+<section class="landingPage" data-aos="fade-up" >
   <p class="text1">All Projects</p>
   <p class="text2">Home>All Projects</p>
   <p class="text3">Visit my Github profile <i class="bx bxl-github"></i> for all project's source code</p>
 </section>
 
-  <section class="projects" id="projects" data-aos="fade-up">
+  <section class="projects" id="projects">
     <p class="allProjectsTitle">
-      Projects
+      Projects:
     </p>
     <div class="allProjects">
-      <div class="project" data-aos="flip-up">
-        <img src="./images/project.jpg " alt="">
+      <div class="project" data-aos="fade-up">
+        <img src="./images/project.png " alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
         </div>
       </div>
-      <div class="project" data-aos="flip-up">
-        <img src="./images/project.jpg " alt="">
+      <div class="project" data-aos="fade-up">
+        <img src="./images/project.png " alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
         </div>
       </div>
-      <div class="project" data-aos="flip-up">
-        <img src="./images/project.jpg " alt="">
+      <div class="project" data-aos="fade-up">
+        <img src="./images/project.png " alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
         </div>
       </div>
-      <div class="project" data-aos="flip-up">
-        <img src="./images/project.jpg " alt="">
+      <div class="project" data-aos="fade-up">
+        <img src="./images/project.png " alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
         </div>
       </div>
-      <div class="project" data-aos="flip-up">
-        <img src="./images/project.jpg " alt="">
+      <div class="project" data-aos="fade-up">
+        <img src="./images/project.png " alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
         </div>
       </div>
-      <div class="project" data-aos="flip-up">
-        <img src="./images/project.jpg " alt="">
+      <div class="project" data-aos="fade-up">
+        <img src="./images/project.png " alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
         </div>
       </div>
-      <div class="project" data-aos="flip-up">
-        <img src="./images/project.jpg " alt="">
+      <div class="project" data-aos="fade-up">
+        <img src="./images/project.png " alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
         </div>
       </div>
-      <div class="project" data-aos="flip-up">
-        <img src="./images/project.jpg " alt="">
+      <div class="project" data-aos="fade-up">
+        <img src="./images/project.png " alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
@@ -469,7 +165,7 @@ window.onscroll = () => {
 <script> 
 AOS.init(
 {
-  duration: 750
+  duration: 1000
 });
 </script>
 </html>

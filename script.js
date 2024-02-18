@@ -79,3 +79,15 @@ submitBtn.addEventListener('click',function(event)
   alert("Couldn't Send Message.");
   document.querySelector('#myForm').reset();
   });
+
+
+
+
+
+// Rotate Text
+
+  let text = document.querySelector(".text p");
+
+text.innerHTML = text.innerHTML.split("").map((char,i)=>
+    `<b style="transform:rotate(${i * 6.3}deg")>${char}</b>`
+).join("");

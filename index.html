@@ -13,7 +13,7 @@
   <div class="top">
     <div class="top_whiteLine"></div>
   </div>
-  <header data-aos="fade-down">
+  <header>
     <h1 class="primaryColor">Portfolio.</h1>
     <div class="navLinks">
       <ul> 
@@ -27,9 +27,9 @@
     <div id="menuBtn" class="bx bx-menu-alt-right"></div> 
   </header>
   <section class="hero" id="hero">
-    <div class="heroText">
+    <div class="heroText" data-aos="fade-right" >
 <p class="greet">
-  Hello, I'm
+  <img src="./images/hello.png" alt="">, I'm
 </p>
 <h1 class="primaryColor">
   Prasan
@@ -37,7 +37,7 @@
 Poudel</span></h1>
 <p class="typewriter">
 </p>
-<div class="mySocials">
+<div class="mySocials" data-aos="fade-down" >
 <ul>
   <li>
     <a href="https://www.facebook.com/prasan.poudel.77"><i class='bx bxl-facebook-circle'></i></a>
@@ -52,13 +52,21 @@ Poudel</span></h1>
   <a href="#contact">Let's Talk</a>
 </div>
     </div>
-    <div class="heroImg">
-      <img src="./images/profile.png" alt=""/>
-    </div>
+    <div class="heroImg" data-aos="fade-left">
+    <div class="heroImgContainer">
+      <img src="images/profile.png" alt="">
+      <div class="rotate-text">
+          <div class="text">
+              <p>lllllllllllllllllllllllllllllllllllllllllllllllllllllllll</p>
+          </div>
+          <span><i></i></span>
+      </div>
+  </div>
+  </div>
   </section>
   
   <section class="about" id="about">
-  <fieldset class="about-Box1" data-aos="zoom-out-right">
+  <fieldset class="about-Box1" data-aos="fade-up-right" >
     <legend class="primaryColor">Prasan Poudel</legend>
     <ul>
       <li>
@@ -83,7 +91,7 @@ Poudel</span></h1>
       </li>
     </ul>
   </fieldset>
-<div class="about-Box2" data-aos="zoom-out-left">
+<div class="about-Box2" data-aos="fade-up-left" >
   <p class="headingText">
     Why you should <span class="transparentText">hire me</span> for your <span class="primaryColor">next </span><span class="primaryColor">project </span>?
   </p>
@@ -99,7 +107,7 @@ Poudel</span></h1>
     <div class="mySkillsTitle">
       <p>My skills</p>
     </div>
-    <div class="skills" data-aos="fade-down">
+    <div class="skills" data-aos="fade-down" >
       <ul>
         <li><i class='bx bxl-html5'></i>HTML</li>
         <li><i class='bx bxl-css3'></i>CSS</li>
@@ -119,7 +127,7 @@ Poudel</span></h1>
 <div class="projects-Box1" data-aos="fade-up-right">
   <p class="headingText">My <span class="primaryColor">latest</span></p><p class="headingText">awesome <span class="transparentText">projects</span></p>
   <div class="project">
-    <img src="./images/project.jpg " alt="">
+    <img src="./images/project.png " alt="">
     <div class="overlay">
       <p>E-Commerce Webpage</p>
       <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
@@ -128,20 +136,20 @@ Poudel</span></h1>
 </div>
 <div class="projects-Box2" data-aos="fade-down-left">
   <div class="project">
-    <img src="./images/project.jpg " alt="">
+    <img src="./images/project.png " alt="">
     <div class="overlay">
       <p>E-Commerce Webpage</p>
       <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
     </div>
   </div>
-  <div class="allProjectsLink" data-aos="fade-left">
+  <div class="allProjectsLink" data-aos="fade-up" >
     <a href="./allProjects.html">All Projects <i class='bx bx-link-external'></i></a>
   </div>
 </div>
 </div>
 </section>
 
-  <section class="testimonials" data-aos="fade-down">
+  <section class="testimonials" data-aos="fade-up" >
     <div class="testimonialHeading">
     <p class="testimonialTitle">Testimonials</p>
     <p class="headingText">
@@ -194,7 +202,7 @@ Poudel</span></h1>
       </div>
     </div>
   </section>
-<section class="contact" id="contact" data-aos="fade-up">
+<section class="contact" id="contact" data-aos="fade-up" data-aos-duration="500">
   <form id="myForm">
       <h2 class="formTitle">Send us a message</h2>
       <div class="form-fields">
@@ -217,7 +225,7 @@ Poudel</span></h1>
       <input type="submit" value="Send Message" class="submitBtn" onclick="validateForm()">
   </form>
 </section>
-<footer data-aos="fade-up">
+<footer data-aos="fade-up" >
   <h1 class="primaryColor">
     Prasan
   <span class="transparentText">
