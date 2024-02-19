@@ -735,7 +735,6 @@ footer{
   border-top: 10px solid var(--primaryColor);
   border-top-left-radius: 150%;
   border-top-right-radius: 150%;
-  z-index: -1;
 }
 footer::before{
   position: absolute;
@@ -760,7 +759,19 @@ footer ul{
 }
 footer ul li{
   display: flex;
-  gap: 10px;
+  gap: 25px;
+}
+footer ul li a i{
+  z-index: 10;
+  font-size: 5rem;
+  border-radius: 50px;
+  margin: 10px 0;
+  padding: 10px;
+  color: var(--useful-text);
+}
+footer ul li a i:hover{
+  background: var(--primaryColor);
+  color: #fff;
 }
 .copyright{
   font-size: 1.5rem;
