@@ -37,62 +37,13 @@
       Projects:
     </p>
     <div class="allProjects">
-      <div class="project" data-aos="fade-up">
-        <img src="./images/project.png " alt="">
+      <!-- <div class="project" data-aos="fade-up">
+        <img src="./allProjectsImage/clientPortfolioImg.png" alt="">
         <div class="overlay">
           <p>E-Commerce Webpage</p>
           <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
-        </div>
-      </div>
-      <div class="project" data-aos="fade-up">
-        <img src="./images/project.png " alt="">
-        <div class="overlay">
-          <p>E-Commerce Webpage</p>
-          <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
-        </div>
-      </div>
-      <div class="project" data-aos="fade-up">
-        <img src="./images/project.png " alt="">
-        <div class="overlay">
-          <p>E-Commerce Webpage</p>
-          <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
-        </div>
-      </div>
-      <div class="project" data-aos="fade-up">
-        <img src="./images/project.png " alt="">
-        <div class="overlay">
-          <p>E-Commerce Webpage</p>
-          <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
-        </div>
-      </div>
-      <div class="project" data-aos="fade-up">
-        <img src="./images/project.png " alt="">
-        <div class="overlay">
-          <p>E-Commerce Webpage</p>
-          <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
-        </div>
-      </div>
-      <div class="project" data-aos="fade-up">
-        <img src="./images/project.png " alt="">
-        <div class="overlay">
-          <p>E-Commerce Webpage</p>
-          <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
-        </div>
-      </div>
-      <div class="project" data-aos="fade-up">
-        <img src="./images/project.png " alt="">
-        <div class="overlay">
-          <p>E-Commerce Webpage</p>
-          <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
-        </div>
-      </div>
-      <div class="project" data-aos="fade-up">
-        <img src="./images/project.png " alt="">
-        <div class="overlay">
-          <p>E-Commerce Webpage</p>
-          <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
-        </div>
-      </div>
+          <p><a href="#">Source code</Source></a><i class='bx bxs-right-arrow'></i></p>
+        </div> -->
     </div>
     </section>
 <footer>
@@ -156,7 +107,58 @@ window.onscroll = () => {
   navLinks.classList.remove('menu_active');
   menu.classList.replace("bx-x-circle","bx-menu-alt-right" );
 }
-  </script>
+const allProjectsContainer= document.querySelector('.allProjects');
+const projects=[
+  {
+    img: "./allProjectsImage/clientPortfolioImg.png",
+    title: "Client's Portfolio",
+    demo: "https://prasanpoudel.github.io/client-s-Portfolio/",
+    code: "https://github.com/PrasanPoudel/client-s-Portfolio/blob/main/index.html"
+  },
+  {
+    img: "./allProjectsImage/todoListAppImg.png",
+    title: "Functional Todo List App",
+    demo: "https://prasanpoudel.github.io/allProjects/TodoApp/",
+    code: "https://github.com/PrasanPoudel/allProjects/tree/main/TodoApp"
+  },
+  {
+    img: "./allProjectsImage/WeatherAppImg.png",
+    title: "Functional Weather App",
+    demo: "https://prasanpoudel.github.io/allProjects/WeatherApp/",
+    code: "https://github.com/PrasanPoudel/allProjects/tree/main/WeatherApp"
+  },
+  {
+    img: "./allProjectsImage/calculatorImg.png",
+    title: "Functional Calculator App",
+    demo: "https://prasanpoudel.github.io/allProjects/Calculator/",
+    code: "https://github.com/PrasanPoudel/allProjects/tree/main/Calculator"
+  },
+  {
+    img: "./allProjectsImage/pomodoroTimerImg.png",
+    title: "Pomodoro Timer",
+    demo: "https://prasanpoudel.github.io/allProjects/PomodoroTimer/",
+    code: "https://github.com/PrasanPoudel/allProjects/tree/main/PomodoroTimer"
+  },
+  {
+    img: "./allProjectsImage/palindromeCheckerImg.png",
+    title: "Palindrome Checker",
+    demo: "https://prasanpoudel.github.io/allProjects/PalindromeChecker/",
+    code: "https://github.com/PrasanPoudel/allProjects/tree/main/PalindromeChecker"
+  }
+  ]
+  projects.forEach(function(item){
+    let innerHTMl="";
+  innerHTMl+= `<div class="project" data-aos="fade-up">
+        <img src="${item.img}" alt="...">
+        <div class="overlay">
+          <p>${item.title}</p>
+          <p><a href="${item.demo}">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
+          <p><a href="${item.code}">Source Code</a><i class='bx bxs-right-arrow'></i></p>
+          </div>
+          </div>`;
+          allProjectsContainer.innerHTML+= innerHTMl;
+        });
+        </script>
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
 </script>
