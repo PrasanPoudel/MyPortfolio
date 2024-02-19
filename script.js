@@ -78,8 +78,7 @@ submitBtn.addEventListener('click',function(event)
   event.preventDefault();
   alert("Couldn't Send Message.");
   document.querySelector('#myForm').reset();
-  });
-
+});
 
 
 

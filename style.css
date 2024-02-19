@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&display=swap');
 *{
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 500;
   color: var(--text-color);
   box-sizing: border-box;
 }
@@ -18,6 +18,10 @@
   --primaryColor:#00305F;
   --text-color:rgba(100, 100, 100, 1);
   --useful-text:#000;
+}
+.specialFont{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 750;
 }
 body{
   background-color: var(--background-color);
@@ -55,9 +59,9 @@ header{
   top: 0;
   z-index: 15 !important;
   background-color: var(--background-color);
-  box-shadow: -1px 1px 0px 5px var(--primaryColor);
-  -webkit-box-shadow: -1px 1px 0px 5px var(--primaryColor);
-  -moz-box-shadow: -1px 1px 0px 5px var(--primaryColor);
+  box-shadow: -1px 1px 0px 10px var(--primaryColor);
+  -webkit-box-shadow: -1px 1px 0px 10px var(--primaryColor);
+  -moz-box-shadow: -1px 1px 0px 10px var(--primaryColor);
 }
 .navLinks ul{
   display: flex;
@@ -68,7 +72,6 @@ header{
   font-size: 2rem;
   position: relative;
   cursor: pointer;
-  font-weight: 600
 }
 .navLinks a::before{
   content: "";
@@ -131,7 +134,7 @@ header{
 .hero{
 display: grid;
 grid-template-columns: 60% 40%;
-height: 100vh;
+height: 90vh;
 }
 .hero .heroText{
   display: flex;
@@ -180,14 +183,15 @@ height: 100vh;
 .downloadCV{
   background: var(--primaryColor);
   border: none;
-  border-radius: 10px;
-  padding: 10px;
+  border-top-left-radius: 25px;
   text-align: center;
+  padding: 10px;
+  text-align: left;
+  width: 200px;
 }
 .downloadCV a{
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #fff;
-  font-weight: 500;
   text-decoration: none;
 }
 .heroImg{
@@ -208,7 +212,7 @@ height: 100vh;
   position: relative;
   width: 400px;
   height: auto;
-  z-index: 10;
+  z-index: 15 !important;
  border-radius: 50%;
  bottom: 10px;
 }
@@ -277,7 +281,7 @@ height: 100vh;
       transform: translateY(0);
   }
   50%{
-      transform: translateY(-22px);
+      transform: translateY(-45px);
   }
   100%{
       transform: translateY(0);
@@ -285,9 +289,6 @@ height: 100vh;
 }
 
 @media screen and (max-width:1200px){
-  :root{
-    --font-size: 9px;
-  }
   .hero{
   display: flex;
   flex-direction: column;
@@ -323,33 +324,34 @@ height: 100vh;
   padding-bottom: 50px;
   height: auto;
   justify-content: space-between;
+  align-items: center;
 }
 .about-Box1{
   height: 100%;
+  width: 100%;
 }
-fieldset {
-  border: 5px dashed var(--useful-text);
-  padding: 10px;
+.about-Box1 {
+  border: 5px solid var(--useful-text);
+  padding: 10% 10px 10% 10px;
   border-top-left-radius:25px;
 }
-fieldset ul{
+.about-Box1 ul{
   display: flex;
   flex-direction: column;
   gap: 25px;
+  height: 100%;
 }
-fieldset ul li i{
-  font-size: 4rem;
+.about-Box1 ul li i{
+  font-size: 5rem;
   color: var(--useful-text);
 } 
 .NepalFlag{
-  height: 3rem;
+  height: 3.3rem;
 }
-fieldset ul li{
+.about-Box1 ul li{
   display: flex;
-  gap: 25px;
   font-size: 2rem;
-  font-weight: 500;
-  color: rgba(100, 100, 100, 1);
+  text-align: justify;
 }
 .about-Box2{
   display: flex;
@@ -372,32 +374,33 @@ fieldset ul li{
 .explanation{ 
   font-size: 2rem;
   text-align: justify;
-  font-weight: 500;
-  color: rgba(100, 100, 100, 1);
   margin-top: 25px;
+  text-align-last: left;
 }
 .hireBtn{
   background: var(--primaryColor);
-  border: none;
+  border: 2.5px solid var(--useful-text);
   padding: 10px;
-  border-radius: 10px;
+  border-top-left-radius: 25px;
   margin-top: 25px;
-  width: 100px;
+  width: 150px;
   cursor: pointer;
+  text-align: left;
 }
 .hireBtn a{
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 @media screen and (max-width:1200px) {
   .about{
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    
+   grid-template-columns: 1fr;
+   row-gap: 100px;
   }
-  fieldset legend{
+  .about-Box1, .about-Box2{
+    width: 100% !important;
+  }
+  .about-Box1 legend{
     text-align: center;
   }
 }
@@ -405,18 +408,9 @@ fieldset ul li{
 .testimonials{
   margin: 100px 0 100px 0;
 }
-.testimonialHeading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.testimonialTitle{
+.testimonialsTitle{
   font-size: 3.3rem;
   color: var(--primaryColor);
-}
-.testimonialHeading{
-  display: flex;
-  flex-direction: column;
 }
 .clientTestimonials{
   margin-top: 25px;
@@ -432,7 +426,6 @@ fieldset ul li{
   width: 400px;
   box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(100, 100, 100, 1);
   border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
 }
 .clientImg{
   padding: 25px;
@@ -443,7 +436,6 @@ fieldset ul li{
   height: 197px;
   width: 120px;
   border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
   background-color: var(--primaryColor);
 }
 .clientTestimonialComment{
@@ -460,7 +452,6 @@ fieldset ul li{
 .comment{
   font-size: 1.5rem;
   text-align: justify;
-  color: rgba(100, 100, 100, 1);
 }
 .clientName{
   font-size: 2rem;
@@ -468,21 +459,23 @@ fieldset ul li{
 }
 .clientPost{
   font-size: 1.5rem;
-  color: rgba(100, 100, 100, 1);
 }
 
 @media screen and (max-width:1200px) {  
-  .testimonials .primaryColor{
-    font-size: 3.3rem;
+  .testimonials .headingText .primaryColor{
+    font-size: 4rem;
   }
-  .testimonials .transparentText{
-    font-size: 3.3rem;
+  .testimonials .headingText{
+    font-size: 4rem;
   }
-  .testimonials .testimonialHeading .headingText{
-    font-size: 3.3rem;
+  .testimonials .headingText .transparentText{
+    font-size: 4rem;
   }
-  .comment{
-    font-size: 1.2rem;
+  .comment, .clientPost{
+    font-size: 1.25rem;
+  }
+  .clientName{
+    font-size: 1.5rem;
   }
   .clientTestimonial{
     width: 300px;
@@ -522,8 +515,9 @@ flex-direction: column;
 }
 .allProjects{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 100px;
+  grid-template-columns: 40% 50%;
+  justify-content: space-between;
+  align-items: center;
 }
 .projectsTitle{
   font-size: 3.3rem;
@@ -532,11 +526,8 @@ flex-direction: column;
 .projects-Box1, .projects-Box2{
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
   justify-content: space-between;
-}
-.projects-Box1 div{
-  margin-top: 50px;
 }
 .project{
   position: relative;
@@ -545,7 +536,6 @@ flex-direction: column;
   overflow: hidden;
   border: 5px solid black;
   border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
 }
 .project img{
   width: 100%;
@@ -564,7 +554,6 @@ flex-direction: column;
   font-size: 2rem;
   color: #fff;
   position: relative;
-  font-weight: 500;
 }
 .overlay p a::before{
   content: "";
@@ -635,10 +624,13 @@ flex-direction: column;
     grid-template-columns: 1fr;
     row-gap: 50px;
   }
-  .projects-Box1 .headingText, .primaryColor{
+  .allProjects .headingText{
     font-size: 4rem;
   }
-  .projects-Box1 .headingText, .transparentText{
+  .projects-Box1 .allProjectsHeading .headingText, .primaryColor{
+    font-size: 4rem;
+  }
+  .projects-Box1 .allProjectsHeading .headingText, .transparentText{
     font-size: 4rem;
   }
   .overlay p{
@@ -647,22 +639,28 @@ flex-direction: column;
 }
 /* contact  section*/
 .contact{
-  border-top-left-radius:25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width:90%;
   margin: 0 auto 0 auto;
-  padding:35px 25px 35px 25px;
-  background-color: rgba(245, 245, 245, 1);
-  border-bottom:5px solid var(--primaryColor);
+  gap: 50px;
 }
-.formTitle{
-  text-align: center;
+.contactTitle{
   font-size: 3.3rem;
   color: var(--primaryColor);
+}
+.formContainer{
+  width: 100%;
+  background-color: rgba(245, 245, 245, 1);
+  padding: 5%;
+  border-top-left-radius:25px;
 }
 form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(245, 245, 245, 1);
 }
 .form-fields{
   display: table;
@@ -672,7 +670,6 @@ form{
 .form-fields input,
 .form-fields textarea{
   color: rgba(100, 100, 100, 1);
-  font-weight: 500;
   border: none;
   outline:none;
   background: none;
@@ -727,12 +724,39 @@ form{
 
 /* footer section */
 footer{
+  margin-top: 50px;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
-  padding: 25px 0;
+  padding: 50px 0 0 0;
+  margin-bottom: 50px;
+  border-top: 10px solid var(--primaryColor);
+  border-top-left-radius: 150%;
+  border-top-right-radius: 150%;
+  z-index: -1;
+}
+footer::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: auto;
+  right: auto;
+  width: 65%;
+  height: 50%;
+  border: none;
+  border-bottom-left-radius:150%;
+  border-bottom-right-radius: 150%;
+  border-bottom: 10px solid var(--primaryColor);
+  z-index: -1;
+}
+footer ul{
+  margin: 50px 0 50px 0;
+  border: none;
+  border-bottom-left-radius:150%;
+  border-bottom-right-radius: 150%;
+  border-bottom: 10px solid var(--primaryColor);
 }
 footer ul li{
   display: flex;
@@ -740,8 +764,8 @@ footer ul li{
 }
 .copyright{
   font-size: 1.5rem;
+  text-align: center;
 }
-
 
 /* darkmode */
 .darkMode{
@@ -753,12 +777,12 @@ footer ul li{
 #darkModeBtn{
   background-color: transparent;
   border: none;
-    font-size: 3.3rem;
-    cursor: pointer;
-    color: var(--useful-text);
+  font-size: 3.3rem;
+  cursor: pointer;
+  color: var(--useful-text);
+}
+@media screen and (max-width:600px){
+  :root{
+    --font-size: 7.5px;
   }
-  @media screen and (max-width:500px){
-    :root{
-      --font-size: 8px;
-    }
-  }
+}

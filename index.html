@@ -14,30 +14,30 @@
     <div class="top_whiteLine"></div>
   </div>
   <header>
-    <h1 class="primaryColor">Portfolio.</h1>
+    <h1 class="primaryColor specialFont">Portfolio.</h1>
     <div class="navLinks">
       <ul> 
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact Me</a></li>
+      <li><a href="#hero" class="specialFont">Home</a></li>
+      <li><a href="#about" class="specialFont">About Me</a></li>
+      <li><a href="#projects" class="specialFont">Projects</a></li>
+      <li><a href="#contact" class="specialFont">Contact Me</a></li>
       </ul>
     </div>
     <button id="darkModeBtn" class='bx bx-moon' onclick="darkModeToggle()"></button>
     <div id="menuBtn" class="bx bx-menu-alt-right"></div> 
   </header>
   <section class="hero" id="hero">
-    <div class="heroText" data-aos="fade-right" >
+    <div class="heroText" data-aos="fade-up" >
 <p class="greet">
   <img src="./images/hello.png" alt="">, I'm
 </p>
-<h1 class="primaryColor">
+<h1 class="primaryColor specialFont">
   Prasan
-<span class="transparentText">
+<span class="transparentText specialFont">
 Poudel</span></h1>
 <p class="typewriter">
 </p>
-<div class="mySocials" data-aos="fade-down" >
+<div class="mySocials">
 <ul>
   <li>
     <a href="https://www.facebook.com/prasan.poudel.77"><i class='bx bxl-facebook-circle'></i></a>
@@ -48,11 +48,11 @@ Poudel</span></h1>
 </ul>
 </div>
 <div class="heroBtn">
-  <button class="downloadCV"><a href="./portfolio.pdf">Download CV</a></button>
-  <a href="#contact">Let's Talk</a>
+  <button class="downloadCV"><a href="./portfolio.pdf" class="specialFont">Download CV</a></button>
+  <a href="#contact" class="specialFont">Let's Talk</a>
 </div>
     </div>
-    <div class="heroImg" data-aos="fade-left">
+    <div class="heroImg">
     <div class="heroImgContainer">
       <img src="images/profile.png" alt="">
       <div class="rotate-text">
@@ -66,8 +66,8 @@ Poudel</span></h1>
   </section>
   
   <section class="about" id="about">
-  <fieldset class="about-Box1" data-aos="fade-up-right" >
-    <legend class="primaryColor">Prasan Poudel</legend>
+  <fieldset class="about-Box1" data-aos="fade-right" >
+    <legend class="primaryColor specialFont">Prasan Poudel</legend>
     <ul>
       <li>
         <i class='bx bxs-briefcase'></i>
@@ -75,7 +75,7 @@ Poudel</span></h1>
       </li>
       <li>
         <i class='bx bxl-gmail'></i>
-        prasanpoudel501@gmail.com
+        prasanpoudel501 @gmail.com
       </li>
       <li>
         <i class='bx bxs-location-plus'></i>
@@ -91,21 +91,21 @@ Poudel</span></h1>
       </li>
     </ul>
   </fieldset>
-<div class="about-Box2" data-aos="fade-up-left" >
+<div class="about-Box2" data-aos="fade-left" >
   <p class="headingText">
-    Why you should <span class="transparentText">hire me</span> for your <span class="primaryColor">next </span><span class="primaryColor">project </span>?
+    Why you should <span class="transparentText specialFont">hire me</span> for your <span class="primaryColor specialFont">next </span><span class="primaryColor specialFont">project </span>?
   </p>
 <p class="explanation">
   I'm a highly skilled web developer and also a computer science student with a passion for creating amazing and engaging web applications. I am currently studying bachelor in computer science and information technology from Tribhuvan University of Nepal. I am highly skilled in working with technologies like HTML, CSS, Tailwind, SASS, JavaScript along with React Js and also tools like git & github.
 </p>
 <p class="explanation"> I am always looking for new challenges and opportunities to expand my skill set. I am passionate about creating innovative and effective web solutions that make a fulfillment in my client's demand.
 </p>
-<button class="hireBtn"><a href="mailto:prasanpoudel501@gmail.com">Hire Me</a></button>
+<button class="hireBtn "><a href="mailto:prasanpoudel501@gmail.com" class="specialFont">Hire Me</a></button>
 </div>
   </section>
   <section class="mySkills">
     <div class="mySkillsTitle">
-      <p>My skills</p>
+      <p class="specialFont">My skills:</p>
     </div>
     <div class="skills" data-aos="fade-down" >
       <ul>
@@ -120,12 +120,14 @@ Poudel</span></h1>
     </div>
   </section>
 <section class="projects" id="projects">
-<div class="projectsTitle">
-  Projects
+<div class="projectsTitle specialFont">
+  Projects:
 </div>
 <div class="allProjects">
-<div class="projects-Box1" data-aos="fade-up-right">
-  <p class="headingText">My <span class="primaryColor">latest</span></p><p class="headingText">awesome <span class="transparentText">projects</span></p>
+<div class="projects-Box1" data-aos="fade-right">
+  <div class="allProjectsHeading">
+  <p class="headingText">My <span class="primaryColor specialfont">latest</span></p><p class="headingText">awesome <span class="transparentText specialFont">projects</span></p>
+  </div>
   <div class="project">
     <img src="./images/project.png " alt="">
     <div class="overlay">
@@ -134,7 +136,7 @@ Poudel</span></h1>
     </div>
   </div>
 </div>
-<div class="projects-Box2" data-aos="fade-down-left">
+<div class="projects-Box2" data-aos="fade-left">
   <div class="project">
     <img src="./images/project.png " alt="">
     <div class="overlay">
@@ -142,20 +144,18 @@ Poudel</span></h1>
       <p><a href="#">Live Demo</a><i class='bx bxs-right-arrow'></i></p>
     </div>
   </div>
-  <div class="allProjectsLink" data-aos="fade-up" >
-    <a href="./allProjects.html">All Projects <i class='bx bx-link-external'></i></a>
+  <div class="allProjectsLink">
+    <a href="./allProjects.html" class="specialFont">All Projects <i class='bx bx-link-external'></i></a>
   </div>
 </div>
 </div>
 </section>
 
   <section class="testimonials" data-aos="fade-up" >
-    <div class="testimonialHeading">
-    <p class="testimonialTitle">Testimonials</p>
-    <p class="headingText">
-      What <span class="transparentText">my clients</span> have </p>
-      <p class="headingText"> to say <span class="primaryColor">about me</span>
-    </p>
+    <p class="testimonialsTitle specialFont">Testimonials:</p>
+    <div class="headingText">
+      What <span class="transparentText specialFont">my clients</span> have <br/>
+      to say <span class="primaryColor specialFont">about me</span>
     </div>
     <div class="clientTestimonials">
       <div class="clientTestimonial">
@@ -202,9 +202,10 @@ Poudel</span></h1>
       </div>
     </div>
   </section>
-<section class="contact" id="contact" data-aos="fade-up" data-aos-duration="500">
-  <form id="myForm">
-      <h2 class="formTitle">Send us a message</h2>
+<section class="contact" id="contact">
+  <p class="contactTitle specialFont">Send us a message:</p>
+  <div class="formContainer">
+  <form id="myForm" data-aos="fade-up">
       <div class="form-fields">
           <div class="form-group">
               <input type="text" class="fname" placeholder="First Name:" oninput="capitalizeFirstLetter(this)" required>
@@ -222,13 +223,14 @@ Poudel</span></h1>
               <textarea name="message" id="" placeholder="Write your message" required></textarea>
           </div>
       </div>
-      <input type="submit" value="Send Message" class="submitBtn" onclick="validateForm()">
+      <input type="submit" value="Send Message" class="submitBtn specialFont" onclick="validateForm()">
   </form>
+  </div>
 </section>
-<footer data-aos="fade-up" >
-  <h1 class="primaryColor">
+<footer>
+  <h1 class="primaryColor specialFont">
     Prasan
-  <span class="transparentText">
+  <span class="transparentText specialFont">
   Poudel</span></h1>
   <div class="mySocials">
     <ul>
