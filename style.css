@@ -643,7 +643,6 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width:90%;
   gap: 50px;
 }
@@ -654,7 +653,7 @@ flex-direction: column;
 .formContainer{
   width: 100%;
   background-color: rgba(245, 245, 245, 1);
-  padding: 5%;
+  padding: 2.5%;
   border-radius:25px;
 }
 form{
@@ -684,7 +683,7 @@ form{
   width: 45%;
   float: left;
   padding: 0px 30px;
-  margin: 14px 12px;
+  margin: 15px 15px;
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #cbcbcb, inset -8px -8px 8px #fff;
 }
