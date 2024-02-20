@@ -643,7 +643,7 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width:90%;
+  width:100%;
   gap: 50px;
 }
 .contactTitle{
@@ -707,7 +707,6 @@ form{
 }
 @media screen and (max-width: 1200px) {
   .contact{
-    width: 100%;
     height: inherit;
     float: none;  
   }
