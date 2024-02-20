@@ -183,10 +183,10 @@ height: 90vh;
 .downloadCV{
   background: var(--primaryColor);
   border: none;
-  border-top-left-radius: 25px;
+  border-radius:25px;
   text-align: center;
   padding: 10px;
-  text-align: left;
+  text-align: center;
   width: 200px;
 }
 .downloadCV a{
@@ -333,7 +333,7 @@ height: 90vh;
 .about-Box1 {
   border: 5px solid var(--useful-text);
   padding: 10% 10px 10% 10px;
-  border-top-left-radius:25px;
+  border-radius:25px;
 }
 .about-Box1 ul{
   display: flex;
@@ -381,11 +381,11 @@ height: 90vh;
   background: var(--primaryColor);
   border: 2.5px solid var(--useful-text);
   padding: 10px;
-  border-top-left-radius: 25px;
+  border-radius:25px;
   margin-top: 25px;
   width: 150px;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
 }
 .hireBtn a{
   color: #fff;
@@ -415,17 +415,17 @@ height: 90vh;
 .clientTestimonials{
   margin-top: 25px;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
   padding-bottom: 50px;
+  padding-left: 25px;
 }
 .clientTestimonial{
   display: flex;
   width: 400px;
   box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(100, 100, 100, 1);
-  border-top-left-radius: 25px;
+  border-radius:25px;
 }
 .clientImg{
   padding: 25px;
@@ -435,7 +435,7 @@ height: 90vh;
 .clientImg img{
   height: 197px;
   width: 120px;
-  border-top-left-radius: 25px;
+  border-radius:25px;
   background-color: var(--primaryColor);
 }
 .clientTestimonialComment{
@@ -478,7 +478,7 @@ height: 90vh;
     font-size: 1.5rem;
   }
   .clientTestimonial{
-    width: 300px;
+    width: 250px;
   }
 }
 /* mySkills section */
@@ -534,8 +534,9 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   border: 5px solid var(--useful-text);
-  border-top-left-radius: 25px;
+  border-radius:25px;
   overflow: hidden !important;
+  background-color: #fff;
 }
 .project img{
   width: 100%;
@@ -642,8 +643,8 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width:90%;
-  margin: 0 auto 0 auto;
   gap: 50px;
 }
 .contactTitle{
@@ -654,18 +655,16 @@ flex-direction: column;
   width: 100%;
   background-color: rgba(245, 245, 245, 1);
   padding: 5%;
-  border-top-left-radius:25px;
+  border-radius:25px;
 }
 form{
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: rgba(245, 245, 245, 1);
 }
 .form-fields{
   display: table;
   width: 100%;
-  padding: 15px 5px 5px 5px;
 }
 .form-fields input,
 .form-fields textarea{
@@ -705,6 +704,7 @@ form{
   background: var(--primaryColor);
   box-shadow: 5px 5px 10px #b1b1b1, -5px -5px 10px #fff;
   transition: 0.5s;
+  margin: 0 auto 0 auto;
 }
 @media screen and (max-width: 1200px) {
   .contact{
