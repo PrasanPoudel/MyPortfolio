@@ -795,3 +795,50 @@ footer ul li a i:hover{
     --font-size: 7.5px;
   }
 }
+
+/* preLoader animation */
+.preLoaderContainer{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  background-color: var(--background-color);
+  z-index: 100;
+}
+.preLoader {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 750;
+  color: var(--primaryColor);
+}
+  .preLoader::before, .preLoader::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: var(--useful-text);
+    position: absolute;
+    animation: load 0.75s infinite alternate ease-in-out;
+  }
+  
+  .preLoader::before {
+    top: 0;
+  }
+  
+  .preLoader::after {
+    bottom: 0;
+  }
+
+@keyframes load {
+  0% { left: 0; height: 25px; width: 25px }
+  50% { height: 5px; width: 50px }
+  100% { left: 225px; height: 25px; width: 25px}
+}

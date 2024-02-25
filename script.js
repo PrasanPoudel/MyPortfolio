@@ -1,3 +1,10 @@
+const preLoaderContainer= document.querySelector(".preLoaderContainer");
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+preLoaderContainer.style.display = "none";
+  }, 2500);
+});
+
 const darkModeBtn= document.querySelector('#darkModeBtn');
 const body= document.querySelector('body');
 document.addEventListener('DOMContentLoaded', function(){
