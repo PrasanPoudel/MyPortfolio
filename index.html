@@ -12,7 +12,7 @@
 <body>
   <div class="preLoaderContainer">
   <div class="preLoader">Loading...</div>
-  </div>
+</div>
   <div class="top">
     <div class="top_whiteLine"></div>
   </div>
@@ -214,18 +214,23 @@ Poudel</span></h1>
       <div class="form-fields">
           <div class="form-group">
               <input type="text" class="fname" placeholder="First Name:" oninput="capitalizeFirstLetter(this)" required>
+              <div class="placeholder">First Name:</div>
           </div>
           <div class="form-group">
               <input type="text" class="lname" placeholder="Last Name:" oninput="capitalizeFirstLetter(this)" required>
+              <div class="placeholder">Last Name:</div>
           </div>
           <div class="form-group">
               <input type="email" class="email" placeholder="Email:" required>
+              <div class="placeholder">Email:</div>
           </div>
           <div class="form-group">
-              <input type="number" class="phone" placeholder="Phone:" pattern="[0-9]{10}" required>
+              <input type="number" class="phone" placeholder="Phone Number:" pattern="[0-9]{10}" required>
+              <div class="placeholder">Phone Number:</div>
           </div>
           <div class="form-group">
-              <textarea name="message" id="" placeholder="Write your message" required></textarea>
+              <textarea name="message" id="" placeholder="Write your message:" required></textarea>
+              <div class="placeholder">Write your message:</div>
           </div>
       </div>
       <input type="submit" value="Send Message" class="submitBtn specialFont" onclick="validateForm()">

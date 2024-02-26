@@ -1,8 +1,12 @@
-const preLoaderContainer= document.querySelector(".preLoaderContainer");
+const preLoaderContainer= document.querySelector('.preLoaderContainer');
+window.addEventListener('scroll', function() {
+  preLoaderContainer.style.display = "none";
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
 preLoaderContainer.style.display = "none";
-  }, 2500);
+  }, 3000);
 });
 
 const darkModeBtn= document.querySelector('#darkModeBtn');
