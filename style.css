@@ -77,6 +77,8 @@ header{
   font-size: 2rem;
   position: relative;
   cursor: pointer;
+  border-left: 1px solid var(--useful-text);
+  padding-left: 20px;
 }
 .navLinks a::before{
   content: "";
@@ -129,6 +131,7 @@ header{
     .navLinks ul li a{
       color: #fff;
       font-size: 3.3rem;
+      border-left: none;
     }
     .menu_active{
       display: flex;
@@ -185,114 +188,16 @@ height: 90vh;
   text-decoration: underline;
   font-size: 2.5rem;
 }
-.downloadCV{
-  background: var(--primaryColor);
-  border: none;
-  border-radius:25px;
-  text-align: center;
-  padding: 10px;
-  text-align: center;
-  width: 200px;
-}
-.downloadCV a{
-  font-size: 2.5rem;
-  color: #fff;
-  text-decoration: none;
-}
+
 .heroImg{
-  display: flex;
+  background-image: url(./images/model.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  justify-content: center;
+  filter: grayscale(100%);
 }
-.heroImgContainer{
-  position: relative;
-  animation: floatImage 3s ease-in-out infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.heroImgContainer img{
-  position: relative;
-  width: 400px;
-  height: auto;
-  z-index: 15 !important;
- border-radius: 50%;
- bottom: 10px;
-}
-
-.rotate-text{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-.rotate-text span{
-  position: relative;
-  width: 442px;
-  height: 442px;
-  background: linear-gradient(180deg, var(--background-color) 10%, var(--primaryColor) 99%);
-  border: 10px solid var(--useful-text);
-  border-radius: 50%;
-  z-index: 1;
-  overflow: hidden;
-}
-.rotate-text span i{
-  position: absolute;
-  animation: animate 2s linear infinite;
-}
-
-
-.rotate-text .text{
-  position: absolute;
-  width: 490px;
-  height: 490px;
-  background: var(--primaryColor);
-  border-radius: 50%;
-  animation: rotateText 10s linear infinite;
-  border: 5px dashed #fff;
-}
-
-.text b{
-  position: absolute;
-  transform-origin: 0 245px;
-  display: block;
-  top: 0;
-  left: 50%;
-  font-size: 2rem;
-  color: #fff;
-}
-@keyframes animate{
-  0%{
-      transform: rotate(0deg);
-  }
-  100%{
-      transform: rotate(360deg);
-  }
-}
-
-@keyframes rotateText{
-  0%{
-      transform: rotate(0deg);
-  }
-  100%{
-      transform: rotate(360deg);
-  }
-}
-@keyframes floatImage{
-  0%{
-      transform: translateY(0);
-  }
-  50%{
-      transform: translateY(-45px);
-  }
-  100%{
-      transform: translateY(0);
-  }
-}
-
 @media screen and (max-width:1200px){
   .hero{
   display: flex;
@@ -302,22 +207,9 @@ height: 90vh;
   gap: 50px;
   height: auto;
 }
-.heroImgContainer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-}
-.heroImgContainer img{
-  width: 90%;
-  bottom: 0;
-}
-.rotate-text{
-  display: none;
-}
-.heroImgContainer img{
-  background: linear-gradient(180deg, var(--background-color) 10%, var(--primaryColor) 90%);
-  border: 5px solid var(--useful-text);
+.heroImg{
+  height: 500px;
+  width: 100%;
 }
 }
 
@@ -382,21 +274,21 @@ height: 90vh;
   margin-top: 25px;
   text-align-last: left;
 }
-.hireBtn{
+.downloadCV{
   background: var(--primaryColor);
-  border: 2.5px solid var(--useful-text);
-  padding: 10px;
+  border: none;
   border-radius:25px;
-  margin-top: 25px;
-  width: 150px;
-  cursor: pointer;
   text-align: center;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  margin-top: 25px;
 }
-.hireBtn a{
-  color: #fff;
+.downloadCV a{
   font-size: 2.5rem;
+  color: #fff;
+  text-decoration: none;
 }
-
 @media screen and (max-width:1200px) {
   .about{
    grid-template-columns: 1fr;
