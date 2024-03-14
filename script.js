@@ -6,7 +6,7 @@ window.addEventListener('scroll', function() {
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
 preLoaderContainer.style.display = "none";
-  }, 3000);
+  }, 3500);
 });
 
 const darkModeBtn= document.querySelector('#darkModeBtn');
