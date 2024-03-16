@@ -701,7 +701,7 @@ footer ul li a i:hover{
 .darkMode{
   --background-color:#000;
   --useful-text:#fff;
-  --primaryColor: #27AE60;
+  --primaryColor: #8525ae;
   --text-color: rgba(100, 100, 100, 1);
 }
 #darkModeBtn{
