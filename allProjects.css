@@ -7,6 +7,7 @@
   font-weight: 500;
   color: var(--text-color);
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 :root{
   font-size: var(--font-size);

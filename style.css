@@ -7,6 +7,7 @@
   font-weight: 500;
   color: var(--text-color);
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 :root{
   font-size: var(--font-size);
@@ -21,7 +22,7 @@
   width: 100%;
   /* overflow: hidden; */
 }
-.specialFont{
+.highlitedText{
   font-weight: 750;
 }
 body{
@@ -182,7 +183,7 @@ height: 90vh;
 .heroBtn a{
   color: var(--primaryColor);
   text-decoration: underline;
-  font-size: 2.5rem;
+  font-size: 3.3rem;
 }
 
 .heroImg{
